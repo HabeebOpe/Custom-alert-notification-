@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   box-sizing: border-box;
+}
+body{
+   font-family: 'PT Sans', sans-serif;
+   background-color: #fff;
+   position: relative;
+}
+.button{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   min-height: 100vh;
+}
+.button button{
+    width: 143px;
+    padding: 11px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FF4646;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.2s ease;
+}
+.button button:hover{
+    border:  5px solid #FF9C9C;
+}
+.alert{
+    position: fixed;
+    top: 10px;
+    width: 320px;
+    background-color: #FFAFAF;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-left: 8px solid #FF1717;
+    overflow: hidden;
+    right: -320px;
+}
+.show{
+    right: 5px;
+    animation: slide 0.5s ease forwards;
+}
+@keyframes slide{
+    0%{
+        right: 40px;
+    }
+    20%{
+        right: -40px;
+    }
+    40%{
+        right: 40px;
+    }
+    80%{
+        right: -40px;
+    }
+    100%{
+        right: 10px;
+    }
+}
+.alert span:first-child{
+    margin-left: 10px;
+    font-size: 20px;
+    color: #FF1717;
+}
+.alert p{
+    font-size: 16px;
+    color: #FF1717;
+}
+.alert span:last-child{
+    font-size: 22px;
+    width: 40px;
+    height: 100%;
+    background-color: #FF9C9C;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #FF1717;
+}
